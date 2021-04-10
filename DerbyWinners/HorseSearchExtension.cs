@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace DerbyWinners
 {
@@ -15,18 +12,18 @@ namespace DerbyWinners
         public string Owner { get; set; }
         public int Page { get; set; }
         public int PageSize { get; set; }
-        public string V2 { get; internal set; }
+        
     }
 
     public static class HorseSearchExtension
     {
         public static IEnumerable<Horses> Search(this IEnumerable<Horses> source, HorseSearch search)
         {
-            return source.Where(s => search.YearWon == null || s.V1.Contains(search.YearWon))
-                         .Where(s => search.Horse == null || s.V2.Contains(search.Horse))
-                         .Where(s => search.Jockey == null || s.V3.Contains(search.Jockey))
-                         .Where(s => search.Trainer == null || s.V4.Contains(search.Trainer))
-                         .Where(s => search.Owner == null || s.V5.Contains(search.Owner))
+            return source.Where(s => search.YearWon == null || s.YearWon.Contains(search.YearWon))
+                         .Where(s => search.Horse == null || s.Horse.Contains(search.Horse))
+                         .Where(s => search.Jockey == null || s.Jockey.Contains(search.Jockey))
+                         .Where(s => search.Trainer == null || s.Trainer.Contains(search.Trainer))
+                         .Where(s => search.Owner == null || s.Owner.Contains(search.Owner))
                                                        
                          .Skip(search.Page * search.PageSize)
                          .Take(search.PageSize);

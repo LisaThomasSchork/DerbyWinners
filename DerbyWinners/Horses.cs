@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DerbyWinners
+﻿namespace DerbyWinners
 {
     public class Horses
     {
         public RandomUtility Utility { get; }
-        public string V1 { get; set; }
-        public string V2 { get; set; }
-        public string V3 { get; set; }
-        public string V4 { get; set; }
-        public string V5 { get; set; }
+        public string YearWon { get; set; }
+        public string Horse { get; set; }
+        public string Jockey { get; set; }
+        public string Trainer { get; set; }
+        public string Owner { get; set; }
         public object RandomUtility { get; internal set; }
 
         public override string ToString()
         {
-            return string.Format("Name: {0}\n", V1);
+            return string.Format("Name: {0}\n", YearWon);
         }
 
-        public Horses(RandomUtility utility, string YearWon, string Horse, string Jockey, string Trainer, string Owner)
+        public Horses(RandomUtility utility, string yearWon, string horse, string jockey, string trainer, string owner)
         {
             Utility = utility;
-            V1 = YearWon;
-            V2 = Horse;
-            V3 = Jockey;
-            V4 = Trainer;
-            V5 = Owner;
+            YearWon = yearWon;
+            Horse = horse;
+            Jockey = jockey;
+            Trainer = trainer;
+            Owner = owner;
         }
 
 
