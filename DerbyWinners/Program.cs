@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DerbyWinners
 {
@@ -17,7 +14,6 @@ namespace DerbyWinners
                 Jockey = "Jockey",
                 Trainer = "Trainer",
                 Owner = "Owner",
-                
                 Page = 0,
                 PageSize = 5
             };

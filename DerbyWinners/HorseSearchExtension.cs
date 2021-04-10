@@ -23,14 +23,13 @@ namespace DerbyWinners
         public static IEnumerable<Horses> Search(this IEnumerable<Horses> source, HorseSearch search)
         {
             return source.Where(s => search.YearWon == null || s.V1.Contains(search.YearWon))
-                         //.Where(s => search.Owner == null || s.V5.Any(h => h.Owner.Contains(search.Owner)))
-                         //.Where(s => search.Size == null || s.Size == search.Size)
-                         //.Where(s => search.Color.Any(c => c == s.PrimaryColor) ||
-                         //            search.Color.Any(c => c == s.SecondaryColor) ||
-                         //            search.Color.Join(s.TertiaryColors,
-                         //                              sc => sc,
-                         //                              tc => tc,
-                         //                              (sc, tc) => (sc)).Any())
+                         .Where(s => search.Horse == null || !s.V2.Any(h => h.Horse.Contains(search.Horse)))
+                         .Where(s => search.Jockey == null || s.Jockey == search.Jockey)
+                         .Where(s => search.Trainer.Any(c => c == s.Trainer) ||
+                                     search.Owner.Any(c => c == s.Owner),
+                                                       sc => sc,
+                                                       
+                                                       (sc) => (sc)).Any()
                          .Skip(search.Page * search.PageSize)
                          .Take(search.PageSize);
         }
