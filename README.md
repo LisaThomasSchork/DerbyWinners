@@ -5,6 +5,7 @@ Once you type any key to begin search, it should display <strong>Five Derby Winn
 - Jockey
 - Trainer
 - Owner
+
 Then hit <strong>'q'</strong> to quit program.
 
 The <strong>Four Features</strong>
