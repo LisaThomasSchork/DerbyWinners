@@ -10,10 +10,10 @@ namespace DerbyWinners
             var searchParameters = new HorseSearch
             {
                 YearWon = "2020",
-                Horse = "Winner",
-                Jockey = "Jockey",
-                Trainer = "Trainer",
-                Owner = "Owner",
+                Horse = null,
+                Jockey = null,
+                Trainer = null,
+                Owner = null,
                 Page = 0,
                 PageSize = 5
             };
@@ -23,9 +23,9 @@ namespace DerbyWinners
             while (Console.ReadKey().KeyChar != 'q')
             {
                 Console.WriteLine($"Page: {searchParameters.Page}");
-                horses.Search(searchParameters).ToList().ForEach(b =>
+                horses.Search(searchParameters).ToList().ForEach(s =>
                 {
-                    Console.WriteLine($"Common Name: {b.YearWon}");
+                    Console.WriteLine($"Winner: {s.YearWon}");
                 });
 
                 searchParameters.Page++;
