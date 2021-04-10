@@ -15,16 +15,10 @@ namespace DerbyWinners
             var horses = new List<Horses>();
             for (int i = 0; i < count; i++)
             {
-                horses.Add(new Horses { utility = RandomUtility, V1 = YearWon(), V2 = Horses(), V3 = Jockey(), V4 = Trainer(), V5 = Owner() });
+                horses.Add(new Horses { V1 = YearWon(), V2 = Horses(), V3 = Jockey(), V4 = Trainer(), V5 = Owner() });
             }
             return horses;
         }
-
-        public string RandomUtility()
-        {
-            string[] utility = { };
-        }
-
         public string YearWon()
         {
             string[] YearWon = { "2000", "2002", "2004", "2006", "2008", "2010", "2012", "2014", "2016" };
@@ -40,9 +34,9 @@ namespace DerbyWinners
         }
         public string Jockey()
         {
-            string[] firstNames = { "Authentic", "Country House", "Justify", "Always Dreaming", "Nyquist", "American Pharoah", "California Chrome", "Orb", "I'll Have Another" };
-            int range = firstNames.Length;
-            return firstNames[gen.Next(range)];
+            string[] Jockey = { "Authentic", "Country House", "Justify", "Always Dreaming", "Nyquist", "American Pharoah", "California Chrome", "Orb", "I'll Have Another" };
+            int range = Jockey.Length;
+            return Jockey[gen.Next(range)];
         }
 
         public string Trainer()

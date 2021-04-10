@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DerbyWinners
 {
-    public class Horses
+    public class Horses : Random
     {
         public RandomUtility Utility { get; }
         public string V1 { get; set; }

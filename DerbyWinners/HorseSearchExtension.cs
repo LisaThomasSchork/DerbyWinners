@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DerbyWinners
 {
-    public class HorseSearch
+    public class HorseSearch 
     {
         public string YearWon { get; set; }
         public string Horse { get; set; }
