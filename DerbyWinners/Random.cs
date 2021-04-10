@@ -9,13 +9,14 @@ namespace DerbyWinners
     public class RandomUtility
     {
         private readonly Random gen = new Random();
+        private readonly RandomUtility utility;
 
         public List<Horses> AddRandomHorses(int count)
         {
             var horses = new List<Horses>();
             for (int i = 0; i < count; i++)
             {
-                horses.Add(new Horses { V1 = YearWon(), V2 = Horses(), V3 = Jockey(), V4 = Trainer(), V5 = Owner() });
+                _ = new Horses(utility, "2000", "Shergar", "Jockey McJockerson", "Trainer", "Me");
             }
             return horses;
         }
