@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return string.Format("Name: {0}\n", YearWon);
+            return $"Year: \"{YearWon}\", Winner: \"{Horses}\"", $"Jockey: \"{Jockey}\", Owner: \"{Owner}\"";
         }
 
         public Horses(RandomUtility utility, string yearWon, string horse, string jockey, string trainer, string owner)

@@ -17,6 +17,7 @@ namespace DerbyWinners
                 Page = 0,
                 PageSize = 5
             };
+
             Console.WriteLine("Type any key to begin search");
             var horses = KentuckyDerbyWinners.LoadHorses();
 
