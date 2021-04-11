@@ -9,16 +9,16 @@ namespace DerbyWinners
         {
             var searchParameters = new HorseSearch
             {
-                YearWon = "2020",
+                YearWon = null,
                 Horse = null,
                 Jockey = null,
                 Trainer = null,
                 Owner = null,
-                Page = 0,
+                Page = 1,
                 PageSize = 5
             };
 
-            Console.WriteLine("Type any key to begin search");
+            Console.WriteLine("Type any key to see a list of Derby Winners");
             var horses = KentuckyDerbyWinners.LoadHorses();
 
             while (Console.ReadKey().KeyChar != 'q')

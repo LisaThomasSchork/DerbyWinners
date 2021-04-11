@@ -13,6 +13,7 @@
         public override string ToString()
         {
             return $"Year: \"{YearWon}\", Winner: \"{Horse}\", Jockey: \"{Jockey}\", Owner: \"{Owner}\"";
+            
         }
 
         public Horses(RandomUtility utility, string yearWon, string horse, string jockey, string trainer, string owner)
