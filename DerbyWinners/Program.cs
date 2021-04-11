@@ -26,7 +26,7 @@ namespace DerbyWinners
                 Console.WriteLine($"Page: {searchParameters.Page}");
                 horses.Search(searchParameters).ToList().ForEach(s =>
                 {
-                    Console.WriteLine($"Winner: {s.YearWon}");
+                    Console.WriteLine(s(5));
                 });
 
                 searchParameters.Page++;
